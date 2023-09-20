@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block styles %}
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('.static', filename='css/styles.css')}}">
+    {% endblock %}
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Web Alarm Clock</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a class="brand" href="{{ url_for('index') }}" title="python icons">pyAlarm</a>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </div>
+    </nav>
+   {% block content %}
+       
+   {% endblock %}
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>
